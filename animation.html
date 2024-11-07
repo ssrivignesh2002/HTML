@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+html{
+  background-color: white;
+}
+body{
+  height: 700px;
+  width: 900px;
+  background-color: aquamarine;
+  border: 2px solid;
+}
+div {
+  width: 100px;
+  height: 100px;
+  border: 2px solid black;
+  border-radius: 50%;
+  text-align: center;
+  align-content: center;
+  background-color: red;
+  position: relative;
+  animation-name: example;
+  animation-duration: 4s;
+  animation-delay: 2s;
+  animation-iteration-count: 3;
+  animation-direction:alternate ;
+}
+
+@keyframes example {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:800px; top:0px;  transform: rotateX('90deg');}
+  50%  {background-color:blue; left:800px; top:300px;}
+  75%  {background-color:green; left:800px; top: 600; }
+  90% {background-color: aqua; left: 0; top: 600px;  transform: rotateX('90deg');}
+  100% {background-color:red; left:0px; top:0px;}
+}
+</style>
+</head>
+<body>
+
+<div>DISC</div>
+
+
+</body>
+</html>
+
+
