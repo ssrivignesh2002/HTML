@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Cart</title>
+    <link rel="stylesheet" href="./movie.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Movie Booking System</h1>
+        <div class="movie-list">
+            <h2>Available Movies</h2>
+            <div class="movies">
+                <div class="movie">
+                    <img src="https://th.bing.com/th?id=OIP.QPL0IrzYgnlKeKV6cKugIgHaK-&w=205&h=304&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2.jpg" alt="Movie 1"><br/>
+                    <button onclick="addToCart('Movie 1')">Add to Cart</button>
+                </div>
+                <div class="movie">
+                    <img src="https://th.bing.com/th/id/OIP.m0WHztjn01Y2PyeUMF9mxwHaK2?w=208&h=302&c=7&r=0&o=5&dpr=1.3&pid=1.7.jpg" alt="Movie 2"><br/>
+                    <button onclick="addToCart('Movie 2')">Add to Cart</button>
+                </div>
+                <div class="movie">
+                    <img src="https://www.vintagemovieposters.co.uk/wp-content/uploads/2020/11/IMG_5878-scaled.jpeg" alt="Movie 3"><br/>
+                    <button onclick="addToCart('Movie 3')">Add to Cart</button>
+                </div>
+                <div class="movie">
+                    <img src="https://th.bing.com/th/id/OIP.2BFVejmT8k9p_OEnlgvFMQHaLc?w=206&h=308&c=7&r=0&o=5&dpr=1.3&pid=1.7.jpg" alt="Movie 4"><br/>
+                    <button onclick="addToCart('Movie 4')">Add to Cart</button>
+                </div>
+                <div class="movie">
+                    <img src="https://th.bing.com/th/id/OIP.TgRVOiJlUISKctGTdnf5sAHaKa?w=206&h=290&c=7&r=0&o=5&dpr=1.3&pid=1.7.jpg" alt="Movie 5"><br/>
+                    <button onclick="addToCart('Movie 5')">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="cart">
+            <h2>Your Cart</h2>
+            <ul id="cartList"></ul>
+        </div>
+    </div>
+    <script src="./movie.js"></script>
+</body>
+</html>
