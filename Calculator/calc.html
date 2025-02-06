@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Calculator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> <link href="https://fonts.googleapis.com/css2?family=Arima:wght@100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        #display {
+            text-align: right;
+            background-color: aqua;
+            color: grey;
+        }
+        .calculator {
+            width: 400px;
+            margin: 50px auto;
+            background-color: black;
+        }
+        .calculator button {
+            width: 100%;
+            height: 60px;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="calculator mx-auto text-center border border-primary rounded-3 p-4">
+                    <div id="display" class="display-4 mb-3">0</div>
+                    <div class="row mb-1">
+                        <div class="col-3"><button class="btn btn-light" onclick="appendOperator('+')">+</button></div>
+                        <div class="col-3"><button class="btn btn-light" onclick="appendOperator('-')">-</button></div>
+                        <div class="col-3"><button class="btn btn-light" onclick="appendOperator('*')">*</button></div>
+                        <div class="col-3"><button class="btn btn-secondary btn-default" onclick="deleteNumber()">⌫</button></div>
+                    </div>
+                    <div class="row mb-1">
+                        <div class="col-3"><button class="btn btn-light" onclick="appendNumber('7')">7</button></div>
+                        <div class="col-3"><button class="btn btn-light" onclick="appendNumber('8')">8</button></div>
+                        <div class="col-3"><button class="btn btn-light" onclick="appendNumber('9')">9</button></div>
+                        <div class="col-3"><button class="btn btn-secondary" onclick="appendOperator('/')">/</button></div>
+                    </div>
+                    <div class="row mb-1">
+                        <div class="col-3"><button class="btn btn-light" onclick="appendNumber('4')">4</button></div>
+                        <div class="col-3"><button class="btn btn-light" onclick="appendNumber('5')">5</button></div>
+                        <div class="col-3"><button class="btn btn-light" onclick="appendNumber('6')">6</button></div>
+                        <div class="col-3"><button class="btn btn-secondary" onclick="appendOperator('%')">%</button></div>
+                    </div>
+                    <div class="row text-center mb-1">
+                        <div class="col-3"><button class="btn btn-light" onclick="appendNumber('1')">1</button></div>
+                        <div class="col-3"><button class="btn btn-light" onclick="appendNumber('2')">2</button></div>
+                        <div class="col-3"><button class="btn btn-light" onclick="appendNumber('3')">3</button></div>
+                        <div class="col-3"><button class="btn btn-secondary btn-default" onclick="appendOperator('+/_')">+/_</button></div>
+                    </div>
+                    <div class="row mb-1 text-center">
+                        <div class="col-3 container-fluid"><button class="btn btn-light" onclick="appendNumber('.')">.</button></div>
+                        <div class="col-3"><button class="btn btn-light" onclick="appendNumber('0')">0</button></div>
+                        <div class="col-3"><button class="btn btn-danger" onclick="clearDisplay()">C</button></div>
+                        <div class="col-3"><button class="equal-sign operator vertical-span btn btn-secondary" onclick="calculateResult()">=</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./calc.js">
+        
+    </script>
+
+
+</body>
+</html>
