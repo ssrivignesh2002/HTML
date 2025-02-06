@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: purple;
+    text-align: center;
+    padding: 15px;
+}
+
+.container {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+form{
+    text-align: center;
+    height: 150px;
+    background-color: aqua;
+    padding: 7px;
+    border-radius: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    color: black;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+}
+
+th {
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    border: 2px solid white;
+
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 style="color: white;">To-Do List</h1>
+        <form id="todo-form">
+            <label for="name">Name : </label>
+            <input type="text" id="name" placeholder="Name" required><br><br><br>       
+            <label for="date">Date : </label>
+            <input type="date" id="date" required><br><br><br>
+            <button type="button" onclick="saveTodo()">Save</button><br><br><br>
+        </form><br><br><br>
+        <table id="todo-table">
+            <thead>
+                <tr>
+                    <th>S.No</th>
+                    <th>Name</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+
+
+    <div>
+        <br/>
+        <input type ="text" value="" id="input" placeholder="write todo"/>
+        <button id="bin">Add todo</button>
+    </div>
+    <ul id = "list">
+
+    </ul> 
+    <script>
+     let todoCount = 0;
+
+      function saveTodo() {
+          const name = document.getElementById('name').value;
+          const date = document.getElementById('date').value;
+        
+            if (name && date) {
+                todoCount++;
+                const table = document.getElementById('todo-table').getElementsByTagName('tbody')[0];
+                 const newRow = table.insertRow();
+               const cell1 = newRow.insertCell(0);
+                const cell2 = newRow.insertCell(1);
+              const cell3 = newRow.insertCell(2);
+        
+            cell1.innerHTML = todoCount;
+        cell2.innerHTML = name;
+            cell3.innerHTML = date;
+        
+              document.getElementById('name').value = '';
+             document.getElementById('date').value = '';
+         } else {
+               alert('Please enter both name and date.');
+           }
+        }
+        </script>
+</body>
+</html>
